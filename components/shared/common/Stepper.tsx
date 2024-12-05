@@ -1,8 +1,11 @@
 'use client';
 
-import { StepItem } from '@/interfaces';
+export interface StepItem {
+  index: number;
+  label: string;
+}
 
-interface StepperProps {
+export interface StepperProps {
   steps: StepItem[];
   currentStep: number;
   isVisible?: boolean;

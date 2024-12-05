@@ -1,6 +1,6 @@
 'use client';
 
-interface OptionSwitchProps {
+interface ButtonSwitchProps {
   leftLabel: string;
   leftValue: string;
   rightLabel: string;
@@ -10,7 +10,7 @@ interface OptionSwitchProps {
   additionalContainerClasses?: string;
 }
 
-export default function OptionSwitch({
+export default function ButtonSwitch({
   leftLabel,
   leftValue,
   rightLabel,
@@ -18,7 +18,7 @@ export default function OptionSwitch({
   selectedValue,
   switchHandler,
   additionalContainerClasses,
-}: OptionSwitchProps) {
+}: ButtonSwitchProps) {
   const handleClick = (value: string) => {
     switchHandler(value);
   };

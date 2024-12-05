@@ -1,3 +1,5 @@
+'use client';
+
 import { ChangeEventHandler } from 'react';
 
 export default function InputText({

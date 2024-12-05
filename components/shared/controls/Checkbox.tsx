@@ -2,7 +2,7 @@
 
 import IconCheck from '../icons/IconCheck';
 
-export default function CustomCheckbox({
+export default function Checkbox({
   customClasses,
   checked,
   onChange,

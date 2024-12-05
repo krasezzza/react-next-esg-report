@@ -1,6 +1,8 @@
+'use client';
+
 import IconSearch from '@/components/shared/icons/IconSearch';
 
-interface SearchProps {
+interface InputSearchProps {
   customClasses?: string;
   height?: string;
   borderColor?: string;
@@ -13,7 +15,7 @@ interface SearchProps {
   searchValue: (value: string) => void;
 }
 
-export default function Search({
+export default function InputSearch({
   searchValue,
   customClasses,
   height = 'h-[30px]',
@@ -24,7 +26,7 @@ export default function Search({
   textColor = 'text-typo-scnd1',
   boxShadow = 'inner-shadow-1',
   borderRadius = 'rounded-[5px]',
-}: SearchProps) {
+}: InputSearchProps) {
   return (
     <div
       className={`flex items-center ${height} border ${borderColor} ${backgroundColor} ${textSize} ${textColor} ${boxShadow} ${borderRadius} ${customClasses} hover:bg-hover-light`}

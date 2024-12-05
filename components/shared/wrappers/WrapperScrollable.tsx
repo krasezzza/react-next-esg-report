@@ -1,16 +1,18 @@
-interface ScrollableContentProps {
+'use client';
+
+interface WrapperScrollableProps {
   children?: React.ReactNode;
   nonScrollable?: boolean;
   showScrollbar?: boolean;
   customClasses?: string;
 }
 
-export default function ScrollableContent({
+export default function WrapperScrollable({
   children,
   nonScrollable,
   showScrollbar,
   customClasses,
-}: ScrollableContentProps) {
+}: WrapperScrollableProps) {
   const wrapperClasses = () => {
     let classes = '';
 

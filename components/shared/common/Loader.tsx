@@ -1,6 +1,6 @@
 'use client';
 
-export default function LoadingSpinner() {
+export default function Loader() {
   return (
     <svg
       className="w-20 h-20 animate-spin text-gray-900/50"

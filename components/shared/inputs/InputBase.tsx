@@ -1,7 +1,16 @@
 'use client';
 
-import { InputBaseProps } from '@/interfaces';
 import { useRef, useState } from 'react';
+
+export interface InputBaseProps {
+  customClasses?: string;
+  labelText: string;
+  placeholderText: string;
+  currentValue?: string;
+  onChangeHandler?: (value: string) => void;
+  error?: string;
+  icon?: React.ReactElement;
+}
 
 export default function InputBase({
   customClasses,

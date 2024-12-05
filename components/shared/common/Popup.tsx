@@ -1,6 +1,23 @@
-import { PopupProps } from '@/interfaces';
+'use client';
+
+import { ReactElement } from 'react';
 import ButtonIcon from '../buttons/ButtonIcon';
 import IconClose from '../icons/IconClose';
+
+export interface PopupProps {
+  title?: string;
+  subtitle?: string;
+  description?: ReactElement;
+  content: ReactElement;
+  primaryButton?: ReactElement;
+  secondaryButton?: ReactElement;
+  buttonsDivClasses?: string;
+  closeModal: () => void;
+  titleStyling?: string;
+  bottomContent?: ReactElement;
+  parentStyling?: string;
+  contentClasses?: string;
+}
 
 export default function Popup({
   title,

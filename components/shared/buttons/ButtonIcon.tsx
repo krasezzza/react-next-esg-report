@@ -1,8 +1,17 @@
 'use client';
 
-import { ButtonIconProps } from '@/interfaces';
-import ButtonGeneric from './ButtonGeneric';
+import ButtonGeneric, { ButtonGenericProps } from './ButtonGeneric';
 import ButtonTooltipDescription from './ButtonTooltipDescription';
+
+export interface ButtonIconProps extends ButtonGenericProps {
+  iconClasses?: string;
+  tooltipContent?: string;
+  tooltipMarginTopClass?: string;
+  tooltipMinWidthClass?: string;
+  tooltipMinHeightClass?: string;
+  overrideWrapperClasses?: string;
+  additionalWrapperClasses?: string;
+}
 
 export default function ButtonIcon({
   isDisabled,

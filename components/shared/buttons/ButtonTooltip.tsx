@@ -1,6 +1,7 @@
 'use client';
-import { ButtonIconProps } from '@/interfaces';
+
 import IconQuestionMark from '../icons/IconQuestionMark';
+import { ButtonIconProps } from './ButtonIcon';
 import ButtonTooltipDescription from './ButtonTooltipDescription';
 
 export default function ButtonTooltip({

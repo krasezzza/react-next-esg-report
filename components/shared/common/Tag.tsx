@@ -1,7 +1,7 @@
 import ButtonIcon from '../buttons/ButtonIcon';
 import IconClose from '../icons/IconClose';
 
-export default function FilterTag({
+export default function Tag({
   text,
   onRemove,
 }: {

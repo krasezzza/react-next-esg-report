@@ -1,7 +1,6 @@
 'use client';
 
 import { CompanyData } from '@/interfaces';
-import { Text } from '@chakra-ui/react';
 
 export default function CompanyTitle({
   data,
@@ -9,9 +8,7 @@ export default function CompanyTitle({
   data: CompanyData | undefined;
 }) {
   return !!data ? (
-    <Text fontSize={'18px'} fontWeight={'bold'}>
-      {data.companyname}
-    </Text>
+    <span className="text-lg font-bold">{data.companyname}</span>
   ) : (
     <></>
   );

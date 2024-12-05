@@ -1,9 +1,19 @@
 'use client';
 
-import { InputSelectProps } from '@/interfaces';
 import { useState } from 'react';
 import ButtonIcon from '../buttons/ButtonIcon';
 import IconDropdownFilled from '../icons/IconDropdownFilled';
+
+export interface InputSelectProps {
+  customClasses?: string;
+  labelText: string;
+  placeholderText: string;
+  selectListItems: string[];
+  initialValue?: string;
+  inputValue: (value: string) => void;
+  style?: 'normal' | 'white';
+  disabled?: boolean;
+}
 
 export default function InputSelect(props: InputSelectProps) {
   const {

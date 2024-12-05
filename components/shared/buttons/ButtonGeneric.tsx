@@ -1,8 +1,21 @@
 'use client';
 
-import { IconPosition } from '@/enums';
-import { ButtonGenericProps } from '@/interfaces';
-import { useRef } from 'react';
+import { MouseEventHandler, useRef } from 'react';
+
+export enum IconPosition {
+  RIGHT = 'right',
+  LEFT = 'left',
+}
+
+export interface ButtonGenericProps {
+  isDisabled?: boolean;
+  textValue?: string;
+  onClickHandler?: MouseEventHandler<HTMLDivElement>;
+  overrideClasses?: string;
+  additionalClasses?: string;
+  iconElement?: JSX.Element;
+  iconPosition?: IconPosition;
+}
 
 export default function ButtonGeneric({
   isDisabled = false,

@@ -1,3 +1,8 @@
+export interface SearchQuery {
+  name: string;
+  year: number;
+}
+
 export interface CompanyData {
   request_id: number;
   companyname: string;
