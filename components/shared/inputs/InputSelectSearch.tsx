@@ -1,9 +1,9 @@
 'use client';
 
+import { useMainContext } from '@/context/MainContext';
 import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import ButtonIcon from '../buttons/ButtonIcon';
 import IconDropdownFilled from '../icons/IconDropdownFilled';
-import { useMainContext } from '@/context/MainContext';
 
 export interface InputSelectSearchProps {
   customClasses?: string;

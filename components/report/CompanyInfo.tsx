@@ -48,7 +48,7 @@ export default function CompanyInfo({
 
       <div className="flex justify-between">
         <span>Reported:</span>
-        <span className="font-semibold">{data["Year"]}</span>
+        <span className="font-semibold">{data['Year']}</span>
       </div>
     </div>
   ) : (

@@ -1,4 +1,4 @@
-import { SearchQuery, CompanyData } from "@/interfaces";
+import { CompanyData, SearchQuery } from '@/interfaces';
 
 export const fetchResult = async (
   query: SearchQuery,
@@ -11,23 +11,23 @@ export const fetchResult = async (
       // if (signal.aborted) {
       //   reject(new Error('Request aborted'));
       // } else {
-        fetch('/esg-data.json')
-          .then((response) => response.json())
-          .then((esgData) => {
-            const result = esgData.find((companyData: CompanyData) => {
-              if (
-                companyData.companyname.toLowerCase() ===
+      fetch('/esg-data.json')
+        .then((response) => response.json())
+        .then((esgData) => {
+          const result = esgData.find((companyData: CompanyData) => {
+            if (
+              companyData.companyname.toLowerCase() ===
                 query.name.toLowerCase() &&
-                companyData['Year'] === query.year
-              ) {
-                return companyData;
-              } else {
-                return undefined;
-              }
-            });
-            resolve(result);
-          })
-          .catch((error) => console.error('Error fetching data:', error));
+              companyData['Year'] === query.year
+            ) {
+              return companyData;
+            } else {
+              return undefined;
+            }
+          });
+          resolve(result);
+        })
+        .catch((error) => console.error('Error fetching data:', error));
       // }
     });
   } catch (error: any) {

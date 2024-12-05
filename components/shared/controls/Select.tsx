@@ -23,7 +23,7 @@ export default function Select({
   labelCustomClasses,
   wrapperCustomClasses,
   selectorCustomClasses,
-  menuCustomClasses
+  menuCustomClasses,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -58,9 +58,7 @@ export default function Select({
         }}
         data-id="select-menu-button"
       >
-        {label && (
-          <span className={labelClasses()}>{label}</span>
-        )}
+        {label && <span className={labelClasses()}>{label}</span>}
         <div className="flex justify-between items-center w-full text-xs md:text-sm">
           <span>{options[selectedIndex]}</span>
           <div
@@ -71,9 +69,7 @@ export default function Select({
         </div>
       </div>
       {isOpen && (
-        <div
-          className={dropdownClasses()}
-        >
+        <div className={dropdownClasses()}>
           <WrapperScrollable customClasses="flex flex-col rounded-[4px] menu-box-shadow max-h-[200px]">
             {options.map((option, index) => (
               <div

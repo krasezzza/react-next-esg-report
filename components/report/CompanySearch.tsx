@@ -1,8 +1,8 @@
 'use client';
 
-import InputSelectSearch from '../shared/inputs/InputSelectSearch';
-import { useMainContext } from '@/context/MainContext';
 import { SUPPORTED_COMPANIES } from '@/constants';
+import { useMainContext } from '@/context/MainContext';
+import InputSelectSearch from '../shared/inputs/InputSelectSearch';
 
 export default function CompanySearch() {
   const { queryName, setQueryName } = useMainContext();

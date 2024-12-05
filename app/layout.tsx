@@ -1,7 +1,7 @@
+import { MainProvider } from '@/context/MainContext';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { MainProvider } from '@/context/MainContext';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='h-full hide-scrollbar'>
+    <html lang="en" className="h-full hide-scrollbar">
       <MainProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
